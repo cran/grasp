@@ -20,8 +20,8 @@ cat(date(), "\n")
 cat("RESPONSE NAME: ", Yname, "\n")
 tempy <- YYY[, gr.Yi]
 if(OPTIONS$FAM != "binomial" & OPTIONS$FAM != "quasibinomial"){
-      den.tempy <- density(tempy, width = 4, na.rm = T)
-      hist(tempy, ylab = "COUNT", xlab = Yname , xlim= c(min(tempy),max(tempy)),main=" ",col=OPTIONS$prescol)
+      den.tempy <- density(tempy, width = 4, na.rm = TRUE)
+      hist(tempy, ylab = "COUNT", xlab = Yname , xlim= c(min(tempy), max(tempy)), main=" ", col=OPTIONS$prescol)
       den.tempy$y <- den.tempy$y * length(tempy) * 2
       # multiply density by length of series and width of histogram bar 
       lines(den.tempy)

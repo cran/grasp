@@ -31,7 +31,7 @@ cat(" vvvvvvvvvv GRASP PLOT vvvvvvvvvv ", "\n")
 cat(date(), "\n")
 cat("RESPONSE NAME: ", Yname, "\n")
 par(mfrow = OPTIONS$PLOTPAR)
-plot.gam(ModelYi, se = OPTIONS$STDERROR, rugplot = TRUE)
+plot(ModelYi, se = OPTIONS$STDERROR, rugplot = TRUE)
 # plots the partial repsonse curves
 par(mfrow = c(1, 1))
 mtext(paste(OPTIONS$TITLE, " ", Yname), line = 3, outer = FALSE, side = 3,cex = 1)
