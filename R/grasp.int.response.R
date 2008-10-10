@@ -1,7 +1,7 @@
 "grasp.int.response" <-
 function(sY, sX)
 {
-if (!OPTIONS$PNG) get(getOption("device"))()
+if (!OPTIONS$PNG) dev.new()
 else {png(filename = paste("resp" ,".png",sep=""), width = 800, height = 800, res=150)}
 
 cat("#", "\n")

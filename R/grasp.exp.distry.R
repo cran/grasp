@@ -2,7 +2,7 @@
 function(gr.Yi, nbar = OPTIONS$NBAR)
 {
 Yname <- names(YYY)[gr.Yi]
-if (!OPTIONS$PNG) get(getOption("device"))()
+if (!OPTIONS$PNG) dev.new()
 else {png(filename = paste("distY",Yname,".png",sep=""), width = 800, height = 800, res=150)}
 if(OPTIONS$SINK) {
       # if TRUE save results to a text file

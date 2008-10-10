@@ -10,7 +10,7 @@ cat("\n")
 cat(" vvvvvvvvvv GRASP XXXpred PLOT vvvvvvvvvv ", "\n")
 cat(date(), "\n")
 Xname <- names(XXX)[gr.Xi]
-if (!OPTIONS$PNG) get(getOption("device"))()
+if (!OPTIONS$PNG) dev.new()
 else {png(filename = paste("xmap",Xname,".png",sep=""), width = 800, height = 800, res=150)}
 resolution <- OPTIONS$RESOLUTION
 maxX <- (ceiling(max(XXXpred$CX)/resolution) * resolution) + resolution
